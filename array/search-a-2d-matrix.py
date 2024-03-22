@@ -18,15 +18,16 @@ class Solution(object):
         if not(top <= bottom):
             return False
         
+        # find the mid index
         midRow = (top + bottom) // 2
         left = 0
         right = len(matrix[0]) - 1
         while left <= right:
-            midCol = (left + right) // 2
-            if matrix[midRow][midCol] > target:
-                right = midCol - 1
-            elif matrix[midRow][midCol] < target:
-                left = midCol + 1
+            midIndex = (left + right) // 2
+            if matrix[midRow][midIndex] > target:
+                right = midIndex - 1
+            elif matrix[midRow][midIndex] < target:
+                left = midIndex + 1
             else:
                 return True
         return False
