@@ -13,6 +13,7 @@ class Solution(object):
             right = dfs(root.right)
             balanced = left[0] and right[0] and abs(left[1] - right[1]) <= 1
             height = max(left[1], right[1]) + 1
-            return [balanced, height]
-
+            return (balanced, height)
         return dfs(root)[0]
+
+        
