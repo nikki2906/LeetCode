@@ -11,17 +11,17 @@ class Solution(object):
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
-        second = slow.next 
-        prev = slow.next = None 
+        second = slow.next
+        slow.next = prev = None
 
         # reverse the second half
         while second:
             tmp = second.next
             second.next = prev
             prev = second
-            second = tmp 
+            second = tmp
 
-        # merge two lists together
+        # merge the two halves
         first = head
         second = prev
         while second:
