@@ -1,12 +1,12 @@
 class Solution(object):
     def searchMatrix(self, matrix, target):
-        # get the dimension of the matrix
-        rows = len(matrix) 
+        # get the matrix dimension
+        rows = len(matrix)
         cols = len(matrix[0])
 
-        # find the middle row
+        # find the midRow
         top = 0
-        bottom = len(matrix) - 1
+        bottom = rows - 1
         while top <= bottom:
             midRow = (top + bottom) // 2
             if matrix[midRow][0] > target:
@@ -17,11 +17,11 @@ class Solution(object):
                 break
         if not(top <= bottom):
             return False
-        
-        # find the mid index
-        midRow = (top + bottom) // 2
+
+        # find the midIndex
         left = 0
-        right = len(matrix[0]) - 1
+        right = cols - 1
+        midRow = (top + bottom) // 2
         while left <= right:
             midIndex = (left + right) // 2
             if matrix[midRow][midIndex] > target:
