@@ -7,14 +7,13 @@ class Solution(object):
                 left += 1
             while left < right and not self.isAlphanumeric(s[right]):
                 right -= 1
-            while s[left].lower() != s[right].lower():
+            if s[left].lower() != s[right].lower():
                 return False
-            left = left + 1
-            right = right - 1
+            left += 1
+            right -= 1
         return True
-            
-        
     def isAlphanumeric(self, c):
         return (ord("A") <= ord(c) <= ord("Z") or 
-                ord("a") <= ord(c) <= ord("z") or 
-                ord("0") <= ord(c) <= ord("9"))
+               ord("a") <= ord(c) <= ord("z") or 
+               ord("0") <= ord(c) <= ord("9"))
+         
