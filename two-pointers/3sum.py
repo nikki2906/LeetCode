@@ -1,13 +1,13 @@
 class Solution(object):
     def threeSum(self, nums):
-        # set up
+        # set up the problem
         res = []
         nums.sort()
-        # first num 
+        # check for neighbors
         for i, a in enumerate(nums):
-            if nums[i] == nums[i-1] and i>0:
-                continue
-            # set up 2 ptrs
+            if i > 0 and nums[i] == nums[i-1]:
+                continue        
+            # set up ptrs
             left = i+1
             right = len(nums) - 1
             while left < right:
@@ -19,6 +19,6 @@ class Solution(object):
                 else: 
                     res.append([a, nums[left], nums[right]])
                     left += 1
-                    while nums[left] == nums[left - 1] and left < right:
+                    while left < right and nums[left] == nums[left - 1]:
                         left += 1
-        return res
+        return res  
