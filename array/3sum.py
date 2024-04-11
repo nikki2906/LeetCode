@@ -1,18 +1,17 @@
 class Solution(object):
     def threeSum(self, nums):
-        # set up
-        res = []
+        # set up 
         nums.sort()
-
-        # first num: check for duplicate value -> skip
+        res = []
+        # first number: check if the previous number = the current number
         for i, a in enumerate(nums):
-            if nums[i] == nums[i-1] and i>0:
-                continue 
+            if nums[i] == nums[i-1] and i > 0:
+                continue
+            # second number
             left = i + 1
             right = len(nums) - 1
             while left < right:
-                three_sum = a + nums[left] + nums[right]
-                # two sum
+                three_sum = a + nums[right] + nums[left]
                 if three_sum > 0:
                     right -= 1
                 elif three_sum < 0:
@@ -20,7 +19,7 @@ class Solution(object):
                 else:
                     res.append([a, nums[left], nums[right]])
                     left += 1
-                    while nums[left] == nums[left - 1] and left < right:
+                    while nums[left] == nums[left-1] and left < right:
                         left += 1
         return res
-            
+        
