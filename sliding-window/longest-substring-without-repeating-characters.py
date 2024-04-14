@@ -10,6 +10,4 @@ class Solution(object):
             while s[right] not in charSet:
                 charSet.add(s[right])
                 length = max(length, right - left + 1)
-            right += 1
         return length
-        
