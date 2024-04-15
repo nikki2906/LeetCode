@@ -1,9 +1,9 @@
 class Solution(object):
     def maxProfit(self, prices):
-        # set up
+        # buy low, sell high
+        max_profit = 0
         left = 0
         right = 1
-        max_profit = 0
         while right < len(prices):
             if prices[left] > prices[right]:
                 left = right
@@ -12,4 +12,3 @@ class Solution(object):
                 max_profit = max(max_profit, profit)
             right += 1
         return max_profit
-        
