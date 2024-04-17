@@ -9,5 +9,5 @@ class Solution(object):
             elif two_sum < target:
                 left += 1
             else:
-                return (left + 1, right + 1)
+                return [left + 1, right + 1]
         return []
