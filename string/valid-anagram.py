@@ -1,7 +1,7 @@
 class Solution(object):
     def isAnagram(self, s, t):
         if len(s) != len(t):
-            return False 
+            return False
         countS={}
         for i in range(len(s)):
             countS[s[i]] = 1 + countS.get(s[i], 0)
@@ -12,3 +12,4 @@ class Solution(object):
             if countS[c] != countT.get(c, 0):
                 return False
         return True
+        
