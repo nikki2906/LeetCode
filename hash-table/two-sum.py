@@ -6,4 +6,4 @@ class Solution(object):
             if difference not in hashMap:
                 hashMap[num] = i
             else:
-                return(hashMap[difference], i)
+                return (hashMap[difference], i)
