@@ -4,7 +4,6 @@ class Solution(object):
         for num in nums:
             if num not in hashSet:
                 hashSet.add(num)
-            else:
+            else: 
                 return True
         return False
-        
