@@ -6,8 +6,10 @@ class Solution(object):
         while right < len(prices):
             if prices[left] < prices[right]:
                 profit = prices[right] - prices[left]
-                maxProfit = max(profit, maxProfit)
-            else:
+                maxProfit = max(maxProfit, profit)
+            else: 
                 left = right
             right += 1
-        return maxProfit 
+        return maxProfit
+    
+        
