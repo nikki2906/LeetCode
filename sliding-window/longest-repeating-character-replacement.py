@@ -10,3 +10,4 @@ class Solution(object):
                 count[s[left]] -= 1
                 left += 1
         return (right - left + 1)
+        
