@@ -7,5 +7,4 @@ class Solution(object):
                 stackTemp, stackIndex = stack.pop()
                 res[stackIndex] = index - stackIndex
             stack.append((temp, index))
-        return res
-        
+        return res        
