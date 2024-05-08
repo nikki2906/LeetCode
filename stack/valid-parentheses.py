@@ -1,7 +1,7 @@
 class Solution(object):
     def isValid(self, s):
         stack = []
-        hashMap = {"}" : "{", ")" : "(", "]" : "["}
+        hashMap = {"}":"{", ")":"(", "]":"[",}
         for c in s:
             if c not in hashMap:
                 stack.append(c)
@@ -10,4 +10,3 @@ class Solution(object):
             else:
                 return False
         return True if not stack else False
-        
