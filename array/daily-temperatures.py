@@ -3,8 +3,8 @@ class Solution(object):
         stack = []
         res = [0] * len(temperatures)
         for index, temp in enumerate(temperatures):
-            while stack and temp > stack[-1][0]:
+            while stack and stack[-1][0] < temp:
                 stackTemp, stackIndex = stack.pop()
                 res[stackIndex] = index - stackIndex
             stack.append((temp, index))
-        return res        
+        return res
