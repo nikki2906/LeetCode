@@ -3,11 +3,12 @@ class Solution(object):
         left = 0
         right = len(nums) - 1
         while left <= right:
-            mid = (left + right) // 2 # calculate the mid index
-            if nums[mid] > target:
-                right -= 1
-            elif nums[mid] < target:
+            mid = (left + right) // 2
+            if nums[mid] < target:
                 left += 1
+            elif nums[mid] > target:
+                right -= 1
             else:
                 return mid
-        return -1
+        return -1 
+        
