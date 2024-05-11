@@ -1,5 +1,5 @@
-class Solution(object):
-    def isValid(self, s):
+class Solution:
+    def isValid(self, s: str) -> bool:
         stack = []
         hashMap = {"}":"{", "]":"[", ")":"("}
         for c in s:
@@ -10,4 +10,3 @@ class Solution(object):
             else:
                 return False
         return True if not stack else False
-        
