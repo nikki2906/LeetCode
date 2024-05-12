@@ -10,8 +10,6 @@ class Solution(object):
         while curr:
             tmp = curr.next
             curr.next = prev
-            prev = curr
-            curr = tmp
+            prev = curr 
+            curr = tmp 
         return prev
-
-        
