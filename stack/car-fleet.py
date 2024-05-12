@@ -6,5 +6,5 @@ class Solution:
         for p, s in pairs:
             stack.append((target - p) / s)
             while len(stack) >= 2 and stack[-1] <= stack[-2]:
-                stack.pop()     
+                stack.pop()
         return len(stack)
