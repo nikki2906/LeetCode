@@ -8,8 +8,9 @@ class Solution(object):
         prev = None
         curr = head
         while curr:
-            tmp = curr.next
+            temp = curr.next
             curr.next = prev
-            prev = curr 
-            curr = tmp 
+            prev = curr
+            curr = temp
         return prev
+        
