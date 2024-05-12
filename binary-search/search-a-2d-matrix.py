@@ -1,6 +1,6 @@
 class Solution(object):
     def searchMatrix(self, matrix, target):
-        # get the dimension:
+        # get the dimension
         rows = len(matrix)
         cols = len(matrix[0])
 
@@ -15,7 +15,7 @@ class Solution(object):
                 bottom = midRow - 1
             else:
                 break
-        
+            
             if not(top <= bottom):
                 return False
         
@@ -24,11 +24,11 @@ class Solution(object):
         right = cols - 1
         midRow = (top + bottom) // 2
         while left <= right:
-            mid = (left + right) // 2
-            if matrix[midRow][mid] > target:
-                right = mid - 1
-            elif matrix[midRow][mid] < target:
-                left = mid + 1
+            midPoint = (left + right) // 2
+            if matrix[midRow][midPoint] > target:
+                right = midPoint- 1
+            elif matrix[midRow][midPoint] < target:
+                left = midPoint + 1
             else:
                 return True
         return False
