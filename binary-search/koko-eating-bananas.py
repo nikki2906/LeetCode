@@ -1,11 +1,11 @@
-class Solution(object):
-    def minEatingSpeed(self, piles, h):
+class Solution:
+    def minEatingSpeed(self, piles: List[int], h: int) -> int:
         left = 1
         right = max(piles)
         res = right
         while left <= right:
             k = (left + right) // 2
-            total = 0 
+            total = 0
             for pile in piles:
                 total += math.ceil(float(pile) / k)
             if total <= h:
