@@ -4,22 +4,20 @@ class Solution:
         right = len(nums) - 1
         while left <= right:
             mid = (left + right) // 2
-            if target == nums[mid]:
+            if nums[mid] == target:
                 return mid
-            if nums[mid] >= nums[left]: # left portion
-                if target > nums[mid]:
+            if nums[mid] >= nums[left]:
+                if nums[left] > target:
                     left = mid + 1
-                elif target < nums[left]:
+                elif nums[mid] < target:
                     left = mid + 1
                 else:
                     right = mid - 1
-            
-            else: # right portion
-                if target < nums[mid]:
+            else:
+                if nums[right] < target:
                     right = mid - 1
-                elif target > nums[right]:
+                elif nums[mid] > target:
                     right = mid - 1
                 else:
                     left = mid + 1
-        return -1
-        
+        return - 1
