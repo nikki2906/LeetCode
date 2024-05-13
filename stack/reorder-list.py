@@ -5,14 +5,14 @@
 #         self.next = next
 class Solution(object):
     def reorderList(self, head):
-        # split the list into two halves
+        # split the list in half using slow & fast pointers
         slow = head
         fast = head
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
         second = slow.next
-        slow.next = prev = None
+        slow.next = prev  = None
 
         # reverse the second half
         while second:
@@ -21,11 +21,11 @@ class Solution(object):
             prev = second
             second = tmp
 
-        # merge the two halves
+        # merge them together 
         first = head
         second = prev
         while second:
-            tmp1 = first.next
+            tmp1 = first.next 
             tmp2 = second.next
             first.next = second
             second.next = tmp1
