@@ -1,13 +1,13 @@
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
         left = 0
+        maxFreq = 0
         hashSet = set()
-        res = 0
         for right in range(len(s)):
             while s[right] in hashSet:
                 hashSet.remove(s[left])
                 left += 1
             hashSet.add(s[right])
-            res = max(res, right - left + 1)
-        return res
+            maxFreq = max(right - left + 1, maxFreq)
+        return maxFreq
         
