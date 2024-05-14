@@ -1,14 +1,15 @@
 class Solution(object):
     def threeSum(self, nums):
-        # set up 
+        # set up
         res = []
         nums.sort()
 
-        # first number
+        # 1st integer
         for i, a in enumerate(nums):
-            if nums[i - 1] == nums[i] and i > 0:
+            if nums[i-1] == nums[i] and i>0:
                 continue
-            left = i + 1
+            # 2nd and 3rd integers
+            left = i+1
             right = len(nums) - 1
             while left < right:
                 threeSum = a + nums[left] + nums[right]
@@ -19,6 +20,7 @@ class Solution(object):
                 else:
                     res.append([a, nums[left], nums[right]])
                     left += 1
-                    while nums[left] == nums[left - 1] and left < right:
+                    while nums[left-1] == nums[left] and left < right:
                         left += 1
         return res
+        
