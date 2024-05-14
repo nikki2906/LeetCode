@@ -1,7 +1,7 @@
-class Solution:
-    def isValid(self, s: str) -> bool:
+class Solution(object):
+    def isValid(self, s):
+        hashMap = {"}":"{", ")":"(", "]":"["}
         stack = []
-        hashMap = {"}":"{", "]":"[", ")":"("}
         for c in s:
             if c not in hashMap:
                 stack.append(c)
