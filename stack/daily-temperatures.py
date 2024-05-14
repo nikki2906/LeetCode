@@ -8,3 +8,6 @@ class Solution(object):
                 res[stackIndex] = index - stackIndex
             stack.append((temp, index))
         return res
+
+
+        
