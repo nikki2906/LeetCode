@@ -2,9 +2,11 @@ class Solution(object):
     def threeSum(self, nums):
         res = []
         nums.sort()
+
         for i, a in enumerate(nums):
-            if nums[i] == nums[i-1] and i>0:
-                continue 
+            if nums[i - 1] == nums[i] and i > 0:
+                continue
+
             left = i + 1
             right = len(nums) - 1
             while left < right:
@@ -14,8 +16,9 @@ class Solution(object):
                 elif threeSum < 0:
                     left += 1
                 else:
-                    res.append([a, nums[left], nums[right]])
+                    res.append([a , nums[left], nums[right]])
                     left += 1
-                    while nums[left] == nums[left-1] and left < right:
+
+                    while nums[left] == nums[left - 1] and left < right:
                         left += 1
         return res
