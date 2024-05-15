@@ -1,6 +1,6 @@
 class Solution(object):
     def search(self, nums, target):
-        left  = 0
+        left = 0
         right = len(nums) - 1
         while left <= right:
             mid = (left + right) // 2
@@ -8,7 +8,7 @@ class Solution(object):
                 right = mid - 1
             elif nums[mid] < target:
                 left = mid + 1
-            else:
+            else: 
                 return mid
         return -1
         
