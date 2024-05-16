@@ -8,7 +8,6 @@ class Solution(object):
                 right = mid - 1
             elif nums[mid] < target:
                 left = mid + 1
-            else: 
+            else:
                 return mid
         return -1
-        
