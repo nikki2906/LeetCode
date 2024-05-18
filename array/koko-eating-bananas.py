@@ -2,7 +2,7 @@ class Solution(object):
     def minEatingSpeed(self, piles, h):
         left = 1
         right = max(piles)
-        res= right
+        res = right
         while left <= right:
             k = (left + right) // 2
             total = 0
@@ -14,4 +14,3 @@ class Solution(object):
             else:
                 left = k + 1
         return res
-        
