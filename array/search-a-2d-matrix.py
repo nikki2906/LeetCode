@@ -1,10 +1,10 @@
-class Solution(object):
-    def searchMatrix(self, matrix, target):
-        # get the dimension
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        # get dimension
         rows = len(matrix)
-        cols = len(matrix[0]) 
+        cols = len(matrix[0])
 
-        # get the mid row 
+        # get the middle row
         top = 0
         bottom = rows - 1
         while top <= bottom:
@@ -15,7 +15,6 @@ class Solution(object):
                 top = midRow + 1
             else:
                 break
-
         if not(top <= bottom):
             return False
         
