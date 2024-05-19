@@ -15,7 +15,6 @@ class Solution:
                 tail.next = list2
                 list2 = list2.next
             tail = tail.next
-        
         if list1:
             tail.next = list1
         if list2:
