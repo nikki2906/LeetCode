@@ -1,5 +1,5 @@
-class Solution(object):
-    def minEatingSpeed(self, piles, h):
+class Solution:
+    def minEatingSpeed(self, piles: List[int], h: int) -> int:
         left = 1
         right = max(piles)
         res = right
