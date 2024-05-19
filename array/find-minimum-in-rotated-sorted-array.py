@@ -4,10 +4,9 @@ class Solution:
         right = len(nums) - 1
         res = nums[0]
         while left <= right:
-            if nums[right] >= nums[left]:
+            if nums[left] <= nums[right]:
                 res = min(res, nums[left])
-                break 
-
+                break
             mid = (left + right) // 2
             res = min(res, nums[mid])
             if nums[mid] >= nums[left]:
