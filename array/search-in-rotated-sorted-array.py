@@ -4,9 +4,9 @@ class Solution:
         right = len(nums) - 1
         while left <= right:
             mid = (left + right) // 2
-            if target == nums[mid]:
+            if nums[mid] == target:
                 return mid
-            if nums[mid] >= nums[left]: # belong to the left
+            if nums[mid] >= nums[left]: # belong to the left portion
                 if target > nums[mid]:
                     left = mid + 1
                 elif target < nums[left]:
