@@ -1,23 +1,22 @@
 """
 # Definition for a Node.
 class Node:
-    def __init__(self, x, next=None, random=None):
+    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
         self.val = int(x)
         self.next = next
         self.random = random
 """
 
-class Solution(object):
-    def copyRandomList(self, head):
-        # clone the nodes
-        hashMap = { None : None }
+class Solution:
+    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        # copy the node
+        hashMap = {None: None}
         curr = head
         while curr:
             copy = Node(curr.val)
             hashMap[curr] = copy
             curr = curr.next
-
-        # set the pointers: next and random pointers
+        # copy the pointers
         curr = head
         while curr:
             copy = hashMap[curr]
