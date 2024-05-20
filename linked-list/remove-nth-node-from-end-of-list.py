@@ -8,7 +8,7 @@ class Solution:
         dummyNode = ListNode(0, head)
         left = dummyNode
         right = head
-        while n > 0 and right:
+        while n > 0:
             right = right.next
             n -= 1
         while right:
@@ -16,4 +16,3 @@ class Solution:
             left = left.next
         left.next = left.next.next
         return dummyNode.next
-
