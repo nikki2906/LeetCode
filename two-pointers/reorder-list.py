@@ -5,6 +5,7 @@
 #         self.next = next
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
+        # split the linked list
         slow = head
         fast = head.next
         while fast and fast.next:
@@ -12,15 +13,13 @@ class Solution:
             fast = fast.next.next
         second = slow.next
         prev = slow.next = None
-        
-        # reverse the second half
+
         while second:
             temp = second.next
             second.next = prev
             prev = second
             second = temp
 
-        # merge the two lists
         first = head
         second = prev
         while second:
