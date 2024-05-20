@@ -1,33 +1,36 @@
 # Definition for singly-linked list.
-# class ListNode(object):
+# class ListNode:
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-class Solution(object):
-    def reorderList(self, head):
-        # split the list in half using slow & fast pointers
+class Solution:
+    def reorderList(self, head: Optional[ListNode]) -> None:
         slow = head
-        fast = head
+        fast = head.next
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
         second = slow.next
-        slow.next = prev  = None
+        prev = slow.next = None
 
         # reverse the second half
         while second:
-            tmp = second.next
+            temp = second.next
             second.next = prev
             prev = second
-            second = tmp
+            second = temp
 
-        # merge them together 
+        # merge the two lists
         first = head
         second = prev
         while second:
-            tmp1 = first.next 
-            tmp2 = second.next
+            temp1 = first.next
+            temp2 = second.next
             first.next = second
-            second.next = tmp1
-            first = tmp1
-            second = tmp2
+            second.next = temp1
+            first = temp1
+            second = temp2
+
+
+        
+        
