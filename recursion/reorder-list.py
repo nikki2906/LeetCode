@@ -12,7 +12,7 @@ class Solution:
             fast = fast.next.next
         second = slow.next
         prev = slow.next = None
-
+        
         # reverse the second half
         while second:
             temp = second.next
@@ -30,7 +30,3 @@ class Solution:
             second.next = temp1
             first = temp1
             second = temp2
-
-
-        
-        
