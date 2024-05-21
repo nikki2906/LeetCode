@@ -9,13 +9,15 @@ class Node:
 
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
-        # copy the node
-        hashMap = {None: None}
+        # copy the nodes
+        hashMap = { None: None }
         curr = head
+
         while curr:
             copy = Node(curr.val)
             hashMap[curr] = copy
             curr = curr.next
+
         # copy the pointers
         curr = head
         while curr:
@@ -23,4 +25,6 @@ class Solution:
             copy.next = hashMap[curr.next]
             copy.random = hashMap[curr.random]
             curr = curr.next
+
         return hashMap[head]
+            
