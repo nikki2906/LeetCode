@@ -5,21 +5,23 @@
 #         self.next = next
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
-        # split the linked list
+        # split the list 
         slow = head
-        fast = head.next
+        fast = head
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
         second = slow.next
         prev = slow.next = None
-
+        
+        # reverse the second half
         while second:
             temp = second.next
             second.next = prev
             prev = second
             second = temp
 
+        # merge two lists
         first = head
         second = prev
         while second:
@@ -29,3 +31,5 @@ class Solution:
             second.next = temp1
             first = temp1
             second = temp2
+        
+        
