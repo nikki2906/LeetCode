@@ -11,14 +11,12 @@ class Solution:
         def dfs(root):
             if not root:
                 return -1
-            # get the heights
+
             left = dfs(root.left)
             right = dfs(root.right)
-            # get the diameter
             res[0] = max(res[0], 2 + left + right)
 
-            # return the height
             return 1 + max(left, right)
+
         dfs(root)
         return res[0]
-        
