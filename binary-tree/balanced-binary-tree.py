@@ -15,8 +15,8 @@ class Solution:
 
             balance = left[0] and right[0] and abs(left[1] - right[1]) <= 1
 
-            height = 1 + max(left[1], right[1])
+            height =  1 + max(left[1], right[1])
 
             return [balance, height]
+
         return dfs(root)[0]
-        
