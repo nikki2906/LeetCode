@@ -9,15 +9,12 @@ class Solution:
         res = [0]
         def dfs(root):
             if not root:
-                return -1 
+                return - 1
+
             left = dfs(root.left)
             right = dfs(root.right)
 
-            res[0] = max(res[0], 2 + left + right)
-
-            return max(left, right) + 1
-
+            res[0] = max(res[0], left + right + 2)
+            return 1 + max(left, right) 
         dfs(root)
         return res[0]
-
-    
