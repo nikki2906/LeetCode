@@ -9,8 +9,8 @@ class Solution:
         res = []
         queue = collections.deque([root])
         while queue:
-            queueLen = len(queue)
             level = []
+            queueLen = len(queue)
             for i in range(queueLen):
                 node = queue.popleft()
                 if node:
@@ -20,3 +20,4 @@ class Solution:
             if level:
                 res.append(level)
         return res
+        
