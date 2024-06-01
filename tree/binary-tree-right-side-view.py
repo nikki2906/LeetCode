@@ -10,8 +10,7 @@ class Solution:
         queue = collections.deque([root])
         while queue:
             rightSide = None
-            queueLen = len(queue)
-            for i in range(queueLen):
+            for i in range(len(queue)):
                 node = queue.popleft()
                 if node:
                     rightSide = node
@@ -20,5 +19,4 @@ class Solution:
             if rightSide:
                 res.append(rightSide.val)
         return res
-
         
