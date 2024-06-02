@@ -8,11 +8,12 @@ class Solution:
     def goodNodes(self, root: TreeNode) -> int:
         def dfs(node, maxVal):
             if not node:
-                    return 0
-            maxVal = max(maxVal, node.val)
-            res = 1 if node.val >= maxVal else 0    
+                return 0
+            maxVal = max(node.val, maxVal)
+            res = 1 if node.val >= maxVal else 0
+
             res += dfs(node.left, maxVal)
             res += dfs(node.right, maxVal)
             return res
         return dfs(root, root.val)
-            
+        
