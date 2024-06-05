@@ -4,7 +4,7 @@ class Solution:
         for i in range(len(s)):
             if s[i] != "]":
                 stack.append(s[i])
-            else:
+            else: # pop - 2 types: substring, number
                 substring = ""
                 while stack[-1] != "[":
                     substring = stack.pop() + substring
@@ -13,8 +13,7 @@ class Solution:
                 k = ""
                 while stack and stack[-1].isdigit():
                     k = stack.pop() + k
-
                 stack.append(int(k) * substring)
         return "".join(stack)
+
                 
-        
