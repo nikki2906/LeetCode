@@ -15,5 +15,3 @@ class Solution(object):
             res += dfs(node.right, maxVal)
             return res
         return dfs(root, root.val)
-
-        
