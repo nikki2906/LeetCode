@@ -6,9 +6,9 @@
 #         self.right = right
 class Solution(object):
     def kthSmallest(self, root, k):
-        n = 0
-        stack = []
         curr = root
+        stack = []
+        n = 0
         while stack or curr:
             while curr:
                 stack.append(curr)
@@ -18,4 +18,3 @@ class Solution(object):
             if n == k:
                 return curr.val
             curr = curr.right
-        
