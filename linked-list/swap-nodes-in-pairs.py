@@ -13,13 +13,11 @@ class Solution(object):
             second = curr.next
             nextPair = curr.next.next
 
-            # reverse the curr pair
+            # reverse the pairs
             second.next = curr
             curr.next = nextPair
             prev.next = second
 
-            #update pointers
             prev = curr
             curr = nextPair
         return dummy.next
-        
