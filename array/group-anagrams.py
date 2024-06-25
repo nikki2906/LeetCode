@@ -8,4 +8,3 @@ class Solution(object):
             else:
                 hashMap[characters].append(word)
         return list(hashMap.values())
-                
