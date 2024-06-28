@@ -6,5 +6,6 @@ class Solution(object):
                 hashMap[num] = 1
             else:
                 hashMap[num] += 1
-        sorted_num = sorted(hashMap, key=hashMap.get, reverse=True)
-        return sorted_num[:k]
+        sortedNum = sorted(hashMap, key = hashMap.get, reverse = True)
+        return sortedNum[:k]
+            
