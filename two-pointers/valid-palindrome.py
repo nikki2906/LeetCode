@@ -9,13 +9,12 @@ class Solution(object):
                 right -= 1
             if s[left].lower() != s[right].lower():
                 return False
-            left  = left + 1
+            left = left + 1
             right = right - 1
         return True
 
     def isAlphanumeric(self, c):
-        return (ord('A') <= ord(c) <= ord('Z') or
-                ord('a') <= ord(c) <= ord('z') or
+        return (ord('A') <= ord(c) <= ord('Z') or 
+                ord('a') <= ord(c) <= ord('z') or 
                 ord('0') <= ord(c) <= ord('9'))
-        
-        
+            
