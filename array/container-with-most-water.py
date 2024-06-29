@@ -1,10 +1,10 @@
 class Solution(object):
     def maxArea(self, height):
-        maxArea = 0
         left = 0
         right = len(height) - 1
+        maxArea = 0
         while left < right:
-            area = min(height[left], height[right]) * (right - left)
+            area = (right - left) * min(height[left], height[right])
             maxArea = max(area, maxArea)
             if height[left] > height[right]:
                 right -= 1
