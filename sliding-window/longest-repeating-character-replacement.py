@@ -1,6 +1,6 @@
 class Solution(object):
     def characterReplacement(self, s, k):
-        left = 0 
+        left = 0
         count = {}
         maxFreq = 0
         for right in range(len(s)):
