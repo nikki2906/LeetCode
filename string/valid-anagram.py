@@ -1,9 +1,5 @@
-# method: 
-# - count the number of each character in both string
-# - use the hashMap
-
-class Solution(object):
-    def isAnagram(self, s, t):
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
         countS = {}
@@ -16,4 +12,3 @@ class Solution(object):
             if countS[c] != countT.get(c, 0):
                 return False
         return True
-        
