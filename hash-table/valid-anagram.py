@@ -1,7 +1,7 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
-            return False
+            return False 
         countS = {}
         for i in range(len(s)):
             countS[s[i]] = 1 + countS.get(s[i], 0)
