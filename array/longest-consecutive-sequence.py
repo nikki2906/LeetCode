@@ -4,8 +4,9 @@ class Solution:
         longest = 0
         for num in nums:
             if (num - 1) not in hashSet:
-                count = 0 
+                count = 0
                 while (num + count) in hashSet:
                     count += 1
-                longest = max(longest, count)
+                longest = max(count, longest)
         return longest
+        
