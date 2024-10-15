@@ -10,5 +10,4 @@ class Solution(object):
             elif prices[left] > prices[right]:
                 left = right
             right += 1
-        return maxProfit
-        
+        return maxProfit        
