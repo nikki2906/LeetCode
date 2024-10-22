@@ -1,5 +1,5 @@
-class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+class Solution(object):
+    def groupAnagrams(self, strs):
         hashMap = {}
         for word in strs:
             characters = tuple(sorted(word))
@@ -7,4 +7,4 @@ class Solution:
                 hashMap[characters] = [word]
             else:
                 hashMap[characters].append(word)
-        return list(hashMap.values())
+        return hashMap.values()
