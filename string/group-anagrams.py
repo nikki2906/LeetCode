@@ -5,6 +5,6 @@ class Solution(object):
             characters = tuple(sorted(word))
             if characters not in hashMap:
                 hashMap[characters] = [word]
-            else:
+            else: 
                 hashMap[characters].append(word)
-        return hashMap.values()
+        return list(hashMap.values())
