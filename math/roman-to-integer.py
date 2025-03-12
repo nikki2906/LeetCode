@@ -16,4 +16,3 @@ class Solution(object):
             else:
                 result += hashMap[s[i]]
         return result
-                
