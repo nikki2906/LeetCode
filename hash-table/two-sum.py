@@ -7,3 +7,4 @@ class Solution(object):
                 hashMap[num] = i
             elif difference in hashMap:
                 return (hashMap[difference], i)
+        
