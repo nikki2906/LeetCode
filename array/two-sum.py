@@ -5,6 +5,5 @@ class Solution(object):
             difference = target - num
             if difference not in hashMap:
                 hashMap[num] = i
-            else:
+            elif difference in hashMap:
                 return (hashMap[difference], i)
-        
