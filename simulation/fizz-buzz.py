@@ -1,16 +1,13 @@
 class Solution:
     def fizzBuzz(self, n: int) -> List[str]:
-
         res = []
-
-        for num in range(1, n + 1): 
-            if num % 3 == 0  and num % 5 == 0: 
+        for n in range(1, n+1):
+            if n % 3 == 0 and n % 5 == 0:
                 res.append("FizzBuzz")
-            elif num % 3 == 0: 
+            elif n % 3 == 0:
                 res.append("Fizz")
-            elif num % 5 == 0: 
+            elif n % 5 == 0: 
                 res.append("Buzz")
-            else: 
-                res.append(str(num))
-            
+            else:
+                res.append(str(n))
         return res
